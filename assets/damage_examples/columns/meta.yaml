@@ -1,0 +1,5 @@
+examples:
+  - file: ex1.jpg
+    caption: "Example damage: diagonal shear cracking"
+  - file: ex2.jpg
+    caption: "Example damage: spalling / exposed rebar"

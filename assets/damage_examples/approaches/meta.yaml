@@ -1,0 +1,5 @@
+examples:
+  - file: ex1.png
+    caption: "This image shows a bridge approach with a severe vertical offset significantly greater than 3 inches. Unlike minor settlement, this magnitude of offset creates an immediate traffic hazard where vehicles would lose control or suffer damage. Therefore, this is an example of condition state R3: Close but inspection needed."
+  - file: ex2.png
+    caption: "This image shows a bridge approach with noticeable ground settlement, which has created a vertical offset (a bump). However, a black Asphalt Concrete (AC) ramp (the dark wedge of pavement) has been placed over the offset to smooth the transition. Because this temporary ramp allows vehicles to pass safely, this is an example of condition state R2: Open but inspection needed. The bridge is open to traffic, but an engineer must inspect the underlying settlement."

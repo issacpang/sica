@@ -1,0 +1,34 @@
+id: approaches
+version: 1
+scope:
+  component: "Approaches"
+  intent: "Post-earthquake access and rideability screening from photos"
+
+r_states:
+  R1:
+    label: "Open"
+    cues:
+      - "Approach pavement appears intact; no visible offset, settlement, or cracking that affects access"
+      - "No visible obstruction or collapse in the approach area"
+  R2:
+    label: "Open but inspection needed"
+    cues:
+      - "Minor cracking/spalling or small unevenness visible but not clearly blocking access"
+      - "Uncertain severity due to limited view/lighting; needs closer inspection"
+  R3:
+    label: "Close but inspection needed"
+    cues:
+      - "Visible significant settlement/offset/step at the approach likely affecting vehicle access"
+      - "Major cracking or separation suggesting unsafe approach until inspected"
+      - "Evidence of potential embankment/approach fill distress"
+
+decision_rules:
+  - "Classify based on the inspection photo (first image). Reference images are for calibration only."
+  - "If any cue for a higher severity is clearly present, choose the higher severity."
+  - "If unsure between two adjacent states, choose the more conservative (higher) state."
+
+output:
+  requirement: "Return only JSON. Keys: component_id, r_state, reason."
+  reason_guidance:
+    - "Reason must cite the visible cue(s) from the inspection photo (e.g., 'step offset at pavement joint')."
+    - "Do not mention reference images explicitly; use them implicitly to interpret damage."

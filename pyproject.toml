@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sica-bridge"
+version = "0.0.0"
+description = "Structure Investigation and Condition Assessment for Bridges (post-earthquake visual inspection)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Issac K.T. Pang" }]
+dependencies = [
+  "pydantic>=2.0",
+  "pyyaml>=6.0",
+  "gradio>=4.0",
+  "openai>=1.0.0",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "ruff>=0.5",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+# include non-python assets if/when we move rubrics/prompts into src later
+sica_bridge = ["py.typed", "data/**/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
