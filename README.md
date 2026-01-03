@@ -27,7 +27,7 @@ It outputs an **R-state** (R1–R4) and a **short reason** per photo, then aggre
 │  ├─ resources/               # loaders for prompts/rubrics/reference images
 │  ├─ schemas/                 # Pydantic output schemas (RState, ComponentAssessment, EventAssessment)
 │  ├─ utils/                   # helpers (e.g., robust JSON extraction)
-│  └─ gui/                     # demo UI (Gradio)
+│  └─ gui/                     # demo UI 
 ├─ prompts/
 │  ├─ system.md
 │  └─ components/              # per-component prompt templates (.md)
@@ -62,13 +62,7 @@ pip install -e ".[dev]"
 The repo includes a Gradio UI and you can have a quick local deployment for testing:
 
 ```bash
-python -m sica_bridge.gui.app_gradio
-```
-
-or (equivalent):
-
-```bash
-python src/sica_bridge/gui/app_gradio.py
+python src/sica_bridge/gui/webserver.py
 ```
 
 Then open the local Gradio URL and upload one or more photos for each component category. Please don't forget to set up the OpenAI API key for the testing.
