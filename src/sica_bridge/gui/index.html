@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SICA Bridge Inspector</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Top banner (brand bar) -->
+    <header class="topbar">
+      <div class="brand">
+        <img src="/static/sica_logo.png" alt="SICA logo" class="brandLogo" />
+
+        <div class="brandText">
+          <div class="brandTitle">Bridge Post-Earthquake Vision Inspector</div>
+          <div class="brandSub">
+            AI-Powered Vision Assessment System for Bridge Component Safety (DEMO)
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Instructions banner -->
+    <section class="instructions">
+      <div class="instructions__title">
+        <svg class="titleIcon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 4h6a2 2 0 0 1 2 2v1h2a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2V6a2 2 0 0 1 2-2z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"/>
+          <path d="M9 4h6v3H9z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"/>
+          <path d="M8 12h8M8 16h8"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"/>
+        </svg>
+        Instructions
+      </div>
+      <ol class="instructions__list">
+        <li>Upload photos of bridge components in their respective categories below</li>
+        <li>You can upload multiple photos for each component type</li>
+        <li>Click <b>Run Assessment</b> to analyze all uploaded images</li>
+        <li>The AI will evaluate structural damage and provide actionable recommendations</li>
+      </ol>
+
+      <div class="statusline">
+        <span class="statusline__label">Status Indicators:</span>
+        <span class="statusline__item"><span class="dot green"></span> R1: Open</span>
+        <span class="statusline__item"><span class="dot yellow"></span> R2: Open, Inspection</span>
+        <span class="statusline__item"><span class="dot red"></span> R3: Close, Inspection</span>
+        <span class="statusline__item"><span class="dot unk"></span> R4: Close Immediately</span>
+      </div>
+    </section>
+
+    <div class="sectionTitle">
+      <svg class="sectionIcon" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="7" width="20" height="13" rx="2.5" 
+              fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M7 7l1.5-2.5a1.5 1.5 0 0 1 1.3-.75h4.4a1.5 1.5 0 0 1 1.3.75L17 7"
+              fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <circle cx="12" cy="13.5" r="3.5" 
+                fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="12" cy="13.5" r="1.5" fill="currentColor"/>
+        <circle cx="18" cy="10" r="0.8" fill="currentColor"/>
+      </svg>
+      Upload Component Photos
+    </div>
+
+    <div class="grid2">
+
+      <!-- Approaches -->
+      <section class="card uploadCard">
+        <div class="cardHead">
+          <div class="cardHead__title">Approaches</div>
+        </div>
+
+        <input class="fileInput" type="file" id="file-approaches" multiple accept="image/*" />
+
+        <div class="dropzone" data-dropzone="approaches" role="button" tabindex="0" aria-label="Upload approach photos">
+          <div class="dzTop">
+            <div class="dzLabel">
+              <svg class="dzLabelIcon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 16a4 4 0 0 1-.88-7.903A5 5 0 1 1 15.9 6h.1a5 5 0 0 1 1 9.9M12 12v9m0-9l-3 3m3-3l3 3" 
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+              </svg>
+              Upload approach photos
+            </div>
+            <div class="dzMeta">
+              <span class="countPill" id="count-approaches">0 selected</span>
+              <button class="dzClear" type="button" data-clear="approaches" title="Clear">✕</button>
+            </div>
+          </div>
+          <div class="dzBody">
+            <div class="dzPlaceholder" data-placeholder="approaches">
+              <div class="dzIcon" aria-hidden="true">
+                <svg class="dzUploadSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+                    <path d="M32 38V16" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 26L32 16L42 26" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 40V50C14 54.4183 17.5817 58 22 58H42C46.4183 58 50 54.4183 50 50V40"
+                        stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="dzText">Drop File Here</div>
+              <div class="dzSub">- or -</div>
+              <div class="dzText">Click to Upload</div>
+            </div>
+            <div class="dzPreview" id="prev-approaches" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Columns -->
+      <section class="card uploadCard">
+        <div class="cardHead">
+          <div class="cardHead__title">Columns</div>
+        </div>
+
+        <input class="fileInput" type="file" id="file-columns" multiple accept="image/*" />
+
+        <div class="dropzone" data-dropzone="columns" role="button" tabindex="0" aria-label="Upload column photos">
+          <div class="dzTop">
+            <div class="dzLabel">
+              <svg class="dzLabelIcon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 16a4 4 0 0 1-.88-7.903A5 5 0 1 1 15.9 6h.1a5 5 0 0 1 1 9.9M12 12v9m0-9l-3 3m3-3l3 3" 
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+              </svg>
+              Upload column photos
+            </div>
+            <div class="dzMeta">
+              <span class="countPill" id="count-columns">0 selected</span>
+              <button class="dzClear" type="button" data-clear="columns" title="Clear">✕</button>
+            </div>
+          </div>
+          <div class="dzBody">
+            <div class="dzPlaceholder" data-placeholder="columns">
+              <div class="dzIcon" aria-hidden="true">
+                <svg class="dzUploadSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+                    <path d="M32 38V16" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 26L32 16L42 26" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 40V50C14 54.4183 17.5817 58 22 58H42C46.4183 58 50 54.4183 50 50V40"
+                        stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="dzText">Drop File Here</div>
+              <div class="dzSub">- or -</div>
+              <div class="dzText">Click to Upload</div>
+            </div>
+            <div class="dzPreview" id="prev-columns" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Joints & Hinges -->
+      <section class="card uploadCard">
+        <div class="cardHead">
+          <div class="cardHead__title">Joints &amp; Hinges</div>
+        </div>
+
+        <input class="fileInput" type="file" id="file-joints_hinges" multiple accept="image/*" />
+
+        <div class="dropzone" data-dropzone="joints_hinges" role="button" tabindex="0" aria-label="Upload joints and hinges photos">
+          <div class="dzTop">
+            <div class="dzLabel">
+              <svg class="dzLabelIcon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 16a4 4 0 0 1-.88-7.903A5 5 0 1 1 15.9 6h.1a5 5 0 0 1 1 9.9M12 12v9m0-9l-3 3m3-3l3 3" 
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+              </svg>
+              Upload intermediate deck joints &amp; hinges photos
+            </div>
+            <div class="dzMeta">
+              <span class="countPill" id="count-joints_hinges">0 selected</span>
+              <button class="dzClear" type="button" data-clear="joints_hinges" title="Clear">✕</button>
+            </div>
+          </div>
+          <div class="dzBody">
+            <div class="dzPlaceholder" data-placeholder="joints_hinges">
+              <div class="dzIcon" aria-hidden="true">
+                <svg class="dzUploadSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+                    <path d="M32 38V16" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 26L32 16L42 26" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 40V50C14 54.4183 17.5817 58 22 58H42C46.4183 58 50 54.4183 50 50V40"
+                        stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="dzText">Drop File Here</div>
+              <div class="dzSub">- or -</div>
+              <div class="dzText">Click to Upload</div>
+            </div>
+            <div class="dzPreview" id="prev-joints_hinges" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Abutments & Shear Keys -->
+      <section class="card uploadCard">
+        <div class="cardHead">
+          <div class="cardHead__title">Abutments </div>
+        </div>
+
+        <input class="fileInput" type="file" id="file-abutments_wingwalls_shearkeys" multiple accept="image/*" />
+
+        <div class="dropzone" data-dropzone="abutments_wingwalls_shearkeys" role="button" tabindex="0" aria-label="Upload abutments and shear keys photos">
+          <div class="dzTop">
+            <div class="dzLabel">
+              <svg class="dzLabelIcon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 16a4 4 0 0 1-.88-7.903A5 5 0 1 1 15.9 6h.1a5 5 0 0 1 1 9.9M12 12v9m0-9l-3 3m3-3l3 3" 
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+              </svg>
+              Upload abutments photos
+            </div>
+            <div class="dzMeta">
+              <span class="countPill" id="count-abutments_wingwalls_shearkeys">0 selected</span>
+              <button class="dzClear" type="button" data-clear="abutments_wingwalls_shearkeys" title="Clear">✕</button>
+            </div>
+          </div>
+          <div class="dzBody">
+            <div class="dzPlaceholder" data-placeholder="abutments_wingwalls_shearkeys">
+              <div class="dzIcon" aria-hidden="true">
+                <svg class="dzUploadSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+                    <path d="M32 38V16" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 26L32 16L42 26" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 40V50C14 54.4183 17.5817 58 22 58H42C46.4183 58 50 54.4183 50 50V40"
+                        stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="dzText">Drop File Here</div>
+              <div class="dzSub">- or -</div>
+              <div class="dzText">Click to Upload</div>
+            </div>
+            <div class="dzPreview" id="prev-abutments_wingwalls_shearkeys" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="actionsRow">
+      <button class="btn" id="clearAll">Clear all</button>
+
+      <button class="btn" id="runBtn" aria-busy="false">
+          <span id="runText">Run Assessment</span>
+        <span class="spinner" id="spinner" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="err hidden" id="err"></div>
+  </div>
+
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <div class="modal">
+      <div class="modal-top">
+        <div class="modal-title">Assessment Results</div>
+        <!-- remove the Close button from here -->
+      </div>
+
+      <div id="report" class="report"></div>
+
+      <div class="modal-footer">
+        <button class="modal-close" id="closeModal">✕ Close</button>
+      </div>
+    </div>
+</div>
+
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -16,7 +16,7 @@ class VisionInput:
     mime_type: str = "image/jpeg"
     filename: Optional[str] = None
 
-    # NEW: help the prompt explain what each image is
+    # Issac: help the prompt explain what each image is
     role: ImageRole = "query"          # "query" or "reference"
     caption: Optional[str] = None      # e.g., "Example: diagonal shear cracking"
 

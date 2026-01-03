@@ -35,7 +35,6 @@ class OpenAIVisionClient(VisionLLMClient):
 
         self._client = OpenAI(api_key=api_key)
 
-        # Optional override via env (nice for experiments)
         self.model = os.getenv("SICA_OPENAI_MODEL", self.model)
 
     def _build_input(self, prompt: str, images: list[VisionInput]) -> list[Dict[str, Any]]:
