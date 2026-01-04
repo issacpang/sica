@@ -160,7 +160,7 @@ from sica_bridge.llm.openai_client import OpenAIVisionClient
 client = OpenAIVisionClient(model="gpt-5.2")
 ```
 
-Please also check [Adding a new LLM provider](README_new_llm_section.md)
+In case you want to use your own computer vision models or other LLMs, please also check [Adding a new LLM provider](README_new_llm_section.md)
 
 ---
 
