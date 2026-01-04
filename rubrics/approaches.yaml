@@ -1,3 +1,5 @@
+# Note: The following rubrics are only proposed suggestions. The final version should be confirmed by the Engineer.
+
 id: approaches
 version: 1
 scope:
@@ -8,19 +10,17 @@ r_states:
   R1:
     label: "Open"
     cues:
-      - "Approach pavement appears intact; no visible offset, settlement, or cracking that affects access"
-      - "No visible obstruction or collapse in the approach area"
+      - "Approach pavement appears intact; no visible offset, settlement, or cracking that affects access."
+      - "No visible obstruction or collapse in the approach area."
   R2:
     label: "Open but inspection needed"
     cues:
-      - "Minor cracking/spalling or small unevenness visible but not clearly blocking access"
-      - "Uncertain severity due to limited view/lighting; needs closer inspection"
+      - "Minor cracking/spalling or small unevenness visible but not clearly blocking access."
   R3:
     label: "Close but inspection needed"
     cues:
-      - "Visible significant settlement/offset/step at the approach likely affecting vehicle access"
-      - "Major cracking or separation suggesting unsafe approach until inspected"
-      - "Evidence of potential embankment/approach fill distress"
+      - "Visible significant settlement/offset/step at the approach likely affecting vehicle access."
+      - "Major cracking or separation suggesting unsafe approach until inspected."
 
 decision_rules:
   - "Classify based on the inspection photo (first image). Reference images are for calibration only."

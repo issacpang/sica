@@ -1,5 +1,9 @@
 examples:
   - file: ex1.jpg
-    caption: "Example damage: diagonal shear cracking"
+    caption: "This image shows a bridge column with localized damage to the concrete cover at the top. While this spalling does not appear to threaten immediate structural collapse, it is classified as condition state R2: Open but inspection needed."
   - file: ex2.jpg
-    caption: "Example damage: spalling / exposed rebar"
+    caption: "This image shows a concrete bridge column exhibiting clear diagonal cracking. In post-earthquake assessment, diagonal cracks are a serious warning sign indicating potential shear failure, implying the column is losing its ability to handle sideways forces. Because this presents a potential structural threat that could lead to sudden failure during an aftershock, the condition state is R3: Close but inspection needed."
+  - file: ex3.jpg
+    caption: "This image depicts severe damage to a bridge column, where the outer concrete cover has extensively spalled off. Crucially, the internal steel rebar reinforcement is exposed, and the concrete core (the concrete trapped within the rebar cage) is visible fractured and damaged. This loss of concrete confinement and cross-sectional area significantly reduces the column's load-carrying capacity and represents a potential structural threat. Therefore, the condition state is R3: Close but inspection needed."
+  - file: ex4.jpg
+    caption: "This image shows bridge columns exhibiting catastrophic damage at their bases, with extensive concrete crushing and spalling, loss of section, and exposed reinforcement consistent with plastic hinge failure. Structural capacity is severely compromised; the bridge must be closed immediately and emergency stabilization and detailed structural assessment are required. Therefore, the condition state is R4: Close immediately."

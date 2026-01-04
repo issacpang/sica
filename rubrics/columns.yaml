@@ -1,3 +1,50 @@
+# Note: The following rubrics are only proposed suggestions. The final version should be confirmed by the Engineer.
+
 id: columns
-version: 0
-notes: placeholder rubric; will be revised
+version: 1
+scope:
+  component: "Columns"
+  intent: "Post-earthquake column/pier damage screening from photos (multi-span bridge supports)"
+
+r_states:
+  R1:
+    label: "Open"
+    cues:
+      - "Column appears plumb with no visible leaning or displacement."
+      - "No visible cracking beyond insignificant hairline surface cracks."
+      - "No concrete spalling/crushing and no exposed reinforcement or steel shell/jacket distress."
+      - "No obvious deck/rail/abutment misalignment above the pier/column in the photo."
+
+  R2:
+    label: "Open but inspection needed"
+    cues:
+      - "Minor cracking or small localized spalls/chips in the column cover with no clear diagonal cracking."
+      - "Localized cover damage at the top of the column near the cap/soffit."
+      - "Minor surface distress (scaling, small delamination) without exposed rebar or core damage."
+
+  R3:
+    label: "Close but inspection needed"
+    cues:
+      - "Large diagonal (shear) cracks approximately 1/8 inch (≈3 mm) wide or greater, or multiple diagonal cracks suggesting shear distress."
+      - "Spalled/crushed concrete in the column (base or along height), especially if reinforcing steel is exposed."
+      - "Exposed rebar with signs of deformation, or broken/damaged concrete visible inside the reinforcement cage (loss of confinement)."
+
+  R4:
+    label: "Close immediately"
+    cues:
+      - "Catastrophic column failure or near-failure: severe crushing/spalling with major loss of section at the base or critical region."
+      - "Core concrete badly fractured with extensive exposed reinforcement; bars/ties buckled, ruptured, or severely deformed."
+      - "Column is severely tilted, laterally displaced, partially collapsed, or shows signs of imminent collapse."
+      - "Any condition indicating the bridge may not remain stable."
+
+decision_rules:
+  - "Classify based on the inspection photo (first image). Reference images are for calibration only."
+  - "If any cue for a higher severity is clearly present, choose the higher severity."
+  - "If unsure between two adjacent states, choose the more conservative (higher) state."
+  - "Diagonal cracking and loss of confinement are treated as high-risk because aftershocks can rapidly worsen damage."
+
+output:
+  requirement: "Return only JSON. Keys: component_id, r_state, reason."
+  reason_guidance:
+    - "Reason must cite the visible cue(s) from the inspection photo (e.g., 'diagonal crack', 'base spalling with exposed rebar', 'column leaning')."
+    - "Do not mention reference images explicitly; use them implicitly to interpret damage."

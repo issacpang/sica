@@ -1,0 +1,30 @@
+{
+  "overall_r_state": "R3",
+  "kpis": {
+    "components_assessed": 1,
+    "photos_analyzed": 2
+  },
+  "components": {
+    "approaches": {
+      "overall_r_state": "R3",
+      "items": [
+        {
+          "photo_index": 1,
+          "filename": "1. Approach Test.png",
+          "photo": "1. Approach Test.png",
+          "r_state": "R3",
+          "reason": "There is a visible significant step offset at the approach pavement that would likely block vehicle access.",
+          "notes": "photo_index=1, filename=1. Approach Test.png"
+        },
+        {
+          "photo_index": 2,
+          "filename": "2. Normal Approach.png",
+          "photo": "2. Normal Approach.png",
+          "r_state": "R1",
+          "reason": "The approach pavement appears intact with no visible offset, settlement, or cracking that affects access. There is no visible obstruction or collapse in the approach area.",
+          "notes": "photo_index=2, filename=2. Normal Approach.png"
+        }
+      ]
+    }
+  }
+}

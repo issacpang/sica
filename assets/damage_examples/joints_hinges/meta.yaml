@@ -1,0 +1,5 @@
+examples:
+  - file: ex1.jpg
+    caption: " This image displays a bridge intermediate hinge or expansion joint in fair condition. The joint assembly is intact, with no vertical offset between the deck sections and no signs of unseating or separation. While minor wear or normal aging may be visible, the critical load-transfer mechanism is sound, and there is no damage that would impede traffic or structural stability. Therefore, the condition state is R1: Open."
+  - file: ex2.jpg
+    caption: "This image shows a critical failure at the bridge hinge, specifically hinge seat damage resulting in a loss of bearing area. The concrete seat supporting the girder has spalled or fractured. Although the span has not completely unseated, the remaining bearing area is critically small, creating a high risk of collapse during an aftershock. Therefore, the condition state is R3: Close but inspection needed."

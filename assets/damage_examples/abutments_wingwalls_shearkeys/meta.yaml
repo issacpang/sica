@@ -1,0 +1,5 @@
+examples:
+  - file: ex1.jpg
+    caption: " Abutment showing surface spalling and large visible cracking in the concrete face; however, the abutment remains fully supported by its foundation (piles or spread footing) with no evidence of loss of support or span unseating. Despite the appearance of damage, the abutment is stable and continues to support the bridge seat. Therefore, the condition state is R1: Open."
+  - file: ex2.jpg
+    caption: "Abutment exhibiting significant lateral offset between the superstructure and the abutment seat, indicating seismic displacement of the bridge relative to its support. This misalignment suggests a potential unseating hazard. Therefore, the condition state is R3: Close but inspection needed."

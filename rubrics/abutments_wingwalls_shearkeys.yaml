@@ -1,3 +1,32 @@
+# Note: The following rubrics are only proposed suggestions. The final version should be confirmed by the Engineer.
+
 id: abutments
-version: 0
-notes: placeholder rubric; will be revised
+version: 1
+scope:
+  component: "Abutments"
+  intent: "Post-earthquake abutment stability and unseating-risk screening from photos"
+
+r_states:
+  R1:
+    label: "Open"
+    cues:
+      - "Abutment face may show spalls and/or large cracks, but the bridge span remains seated with no indication of unseating."
+      - "No visible lateral offset between the superstructure and the abutment seat."
+      
+  R3:
+    label: "Close but inspection needed"
+    cues:
+      - "Visible lateral offset of the superstructure relative to the abutment (bridge shifted sideways on the seat)."
+      - "Any indication that remaining bearing length may be reduced/uncertain, creating a potential unseating hazard."
+
+decision_rules:
+  - "Classify based on the inspection photo (first image). Reference images are for calibration only."
+  - "If any cue for a higher severity is clearly present, choose the higher severity."
+  - "If unsure between two adjacent states, choose the more conservative (higher) state."
+  - "For abutments, cracking/spalling alone is not sufficient for closure unless it is associated with displacement or unseating risk."
+
+output:
+  requirement: "Return only JSON. Keys: component_id, r_state, reason."
+  reason_guidance:
+    - "Reason must cite the visible cue(s) from the inspection photo (e.g., 'lateral offset at abutment seat', 'vertical drop at deck edge')."
+    - "Do not mention reference images explicitly; use them implicitly to interpret damage."

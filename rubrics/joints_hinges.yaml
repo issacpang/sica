@@ -1,3 +1,36 @@
-id: joints_hinges
-version: 0
-notes: placeholder rubric; will be revised
+# Note: The following rubrics are only proposed suggestions. The final version should be confirmed by the Engineer.
+
+id: hinges_joints
+version: 1
+scope:
+  component: "Intermediate Deck Joints and Hinges"
+  intent: "Post-earthquake expansion joint and hinge seat assessment"
+
+r_states:
+  R1:
+    label: "Open"
+    cues:
+      - "Joint assembly appears intact and functional."
+      - "Expansion joint gap is uniform with no debris blockage."
+      - "No vertical offset (bump) between the two deck sections."
+      - "Railing across the joint is continuous and aligned."
+
+  R3:
+    label: "Close but inspection needed"
+    cues:
+      - "Unusually wide hinge joint opening or visible separation indicating relative movement."
+      - "Vertical drop or misalignment at the deck, railing, or barrier across the hinge joint."
+      - "Loss or significant reduction of bearing area at the hinge seat (hinge seat failure)."
+      - "Spalled, crushed, or broken concrete at or near the hinge seat."
+      - "Joint seal no longer fills the joint."
+      - "Remaining hinge seat length appears reduced."
+
+decision_rules:
+  - "Classify based on the inspection photo only; reference images are for calibration."
+  - "If any R3 cue is clearly present, classify as R3."
+  - "Unseating risk or reduced hinge seat length is treated as high-risk due to collapse potential during aftershocks."
+
+output:
+  requirement: "Return only JSON. Keys: component_id, r_state, reason."
+  reason_guidance:
+    - "Reason must specifically name the issue: e.g. 'Hinge seat failure', 'Unseated span', 'Minor joint spalling'."
