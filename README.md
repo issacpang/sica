@@ -26,8 +26,7 @@ It outputs an **R-state** (R1–R4) and a **short reason** per photo, then aggre
 │  ├─ registry/                # component registry (ids, display names, filenames)
 │  ├─ resources/               # loaders for prompts/rubrics/reference images
 │  ├─ schemas/                 # Pydantic output schemas (RState, ComponentAssessment, EventAssessment)
-│  ├─ utils/                   # helpers (e.g., robust JSON extraction)
-│  └─ gui/                     # demo UI 
+│  ├─ utils/                   # helpers (e.g., robust JSON extraction) 
 ├─ prompts/
 │  ├─ system.md
 │  └─ components/              # per-component prompt templates (.md)
@@ -44,6 +43,12 @@ It outputs an **R-state** (R1–R4) and a **short reason** per photo, then aggre
 
 ### Requirements
 - Python **>= 3.10**  
+
+### From PyPI
+
+```bash
+pip install sica-bridge
+```
 
 ### From source (recommended for development)
 

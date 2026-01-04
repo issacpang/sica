@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sica-bridge"
-version = "0.0.0"
+version = "0.1.0"
 description = "Structure Investigation and Condition Assessment for Bridges (post-earthquake visual inspection)"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -13,7 +13,6 @@ authors = [{ name = "Issac K.T. Pang" }]
 dependencies = [
   "pydantic>=2.0",
   "pyyaml>=6.0",
-  "gradio>=4.0",
   "openai>=1.0.0",
   "python-dotenv>=1.0",
 ]
