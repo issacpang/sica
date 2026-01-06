@@ -22,7 +22,7 @@ class ComponentAssessment(BaseModel):
 
 class EventAssessment(BaseModel):
     """
-    Result for a full inspection event (up to 4 photos today, more later).
+    Result for a full inspection event.
     Overall r_state should be the worst-case (max severity) among components.
     """
     overall_r_state: RState

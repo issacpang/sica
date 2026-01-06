@@ -20,23 +20,28 @@ It outputs an **R-state** (R1–R4) and a **short reason** per photo, then aggre
 
 ```text
 .
-├─ src/sica_bridge/
-│  ├─ assess/                  # photo-level assessment + aggregation helpers
-│  ├─ llm/                     # LLM client interface + prompt builder
-│  ├─ registry/                # component registry (ids, display names, filenames)
-│  ├─ resources/               # loaders for prompts/rubrics/reference images
-│  ├─ schemas/                 # Pydantic output schemas (RState, ComponentAssessment, EventAssessment)
-│  ├─ utils/                   # helpers (e.g., robust JSON extraction) 
-├─ prompts/
-│  ├─ system.md
-│  └─ components/              # per-component prompt templates (.md)
-├─ rubrics/                    # per-component rubrics (.yaml)
-├─ assets/
-│  └─ damage_examples/         # optional reference images used in prompts
-│     └─ <component_id>/
-│        ├─ meta.yaml          # optional captions & ordering
-│        └─ *.jpg|*.png
-└─ tests/                      # pytest unit tests
+SICA/
+├─ pyproject.toml
+├─ README.md
+├─ src/
+│  └─ sica_bridge/
+│     ├─ __init__.py
+│     ├─ assess/                  # photo-level assessment + aggregation helpers
+│     ├─ llm/                     # LLM client interface + prompt builder
+│     ├─ registry/                # component registry (ids, display names, filenames)
+│     ├─ resources/               # loaders for prompts/rubrics/reference images
+│     ├─ schemas/                 # Pydantic output schemas (RState, ComponentAssessment, EventAssessment)
+│     ├─ utils/                   # helpers (e.g., robust JSON extraction)
+│     ├─ prompts/
+│     │  ├─ system.md
+│     │  └─ components/           # per-component prompt templates (.md)
+│     ├─ rubrics/                 # per-component rubrics (.yaml)
+│     └─ assets/
+│        └─ damage_examples/      # optional reference images used in prompts
+│           └─ <component_id>/
+│              ├─ meta.yaml       # optional captions & ordering
+│              └─ *.jpg|*.png
+└─ tests/                         # pytest unit tests
 ```
 
 ## Install

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sica-bridge"
-version = "0.1.0"
+version = "0.1.1"
 description = "Structure Investigation and Condition Assessment for Bridges (post-earthquake visual inspection)"
 readme = "README.md"
 requires-python = ">=3.10"
