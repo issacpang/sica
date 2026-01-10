@@ -74,6 +74,11 @@ The repo includes a default UI and you can have a quick local deployment for res
 ```bash
 python gui/webserver.py
 ```
+First install the dependencies:
+
+```bash
+python -m pip install -e ".[gui]"
+```
 
 Then open the local server URL and upload one or more photos for each component category. Please don't forget to set up the OpenAI or other LLM API key for the testing. If you are planning to use your own computer vision models, please set up the GPU server for testing. Go to [Adding a new LLM provider](https://github.com/issacpang/sica/blob/main/README_new_llm_section.md)
  for further information.
