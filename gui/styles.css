@@ -577,13 +577,13 @@ body{
 .dot.r2{ background: rgba(234,179,8,1); }
 .dot.r3{ background: rgba(239,68,68,1); }
 .dot.r4{ background: rgba(168,85,247,1); }
-.dot.unk{ background: rgba(148,163,184,1); }
+.dot.unk{ background: rgba(168,85,247,1); }
 
 .badge.r1{ border-color: rgba(34,197,94,.30); background: rgba(34,197,94,.10); }
 .badge.r2{ border-color: rgba(234,179,8,.35); background: rgba(234,179,8,.12); }
 .badge.r3{ border-color: rgba(239,68,68,.30); background: rgba(239,68,68,.10); }
 .badge.r4{ border-color: rgba(168,85,247,.30); background: rgba(168,85,247,.10); }
-.badge.unk{ border-color: rgba(148,163,184,.35); background: rgba(148,163,184,.12); }
+.badge.unk{ border-color: rgba(148,163,184,.35); background: rgba(141, 4, 239, 0.12); }
 
 .repSection{
   margin: 12px 6px;

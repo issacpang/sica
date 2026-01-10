@@ -9,6 +9,10 @@ It outputs an **R-state** (R1–R4) and a **short reason** per photo, then aggre
 
 > Current scope: 4 component categories (approaches, columns, joints/hinges, abutments/wingwalls/shear keys).
 
+## Post-earthquake Visual Inspection Workflow
+
+<img src="https://raw.githubusercontent.com/issacpang/sica/main/image/pipeline.png" alt="Visual Inspection" width="420"/>
+
 ## R-states (Action Plan)
 
 - **R1** — Open  
