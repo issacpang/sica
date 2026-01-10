@@ -11,7 +11,7 @@ It outputs an **R-state** (R1–R4) and a **short reason** per photo, then aggre
 
 ## Post-earthquake Visual Inspection Workflow
 
-<img src="https://raw.githubusercontent.com/issacpang/sica/main/image/pipeline.png" alt="Visual Inspection" width="500"/>
+<img src="https://raw.githubusercontent.com/issacpang/sica/main/image/pipeline.png" alt="Visual Inspection" width="600"/>
 
 ## R-states (Action Plan)
 
