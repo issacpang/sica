@@ -202,3 +202,11 @@ To add a new component, add a new `ComponentSpec` entry and create:
 - (optional) `assets/damage_examples/<new_id>/...`
 
 ---
+
+## Support
+
+SICA is supported by the [STAIRLab (STructural Artificial Intelligence Research Lab)](https://stairlab.berkeley.edu/) at UC Berkeley.
+
+<a href="https://stairlab.berkeley.edu/">
+  <img src="https://raw.githubusercontent.com/issacpang/sica/main/image/stairlab.svg" alt="STAIRLab at UC Berkeley" width="120"/>
+</a>
