@@ -1,5 +1,7 @@
 # sica-bridge
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23830031.svg)](https://doi.org/10.5281/zenodo.23830031)
+
 <img src="https://raw.githubusercontent.com/issacpang/sica/main/image/sica_logo.svg" alt="SICA logo" width="420"/>
 
 **SICA** = **S**tructure **I**nvestigation and **C**ondition **A**ssessment.
@@ -202,6 +204,24 @@ To add a new component, add a new `ComponentSpec` entry and create:
 - (optional) `assets/damage_examples/<new_id>/...`
 
 ---
+
+## Citation
+
+If you use SICA in your research or proposals, please cite the archived software release:
+
+Pang, Issac K.T. (2026). *SICA: Structure Investigation and Condition Assessment for Bridges* (Version 0.1.4) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23830031
+
+```bibtex
+@software{pang_sica_2026,
+  author    = {Pang, Issac K.T.},
+  title     = {{SICA}: Structure Investigation and Condition Assessment for Bridges},
+  version   = {0.1.4},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23830031},
+  url       = {https://doi.org/10.5281/zenodo.23830031}
+}
+```
 
 ## Support
 
