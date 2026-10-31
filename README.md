@@ -205,6 +205,8 @@ To add a new component, add a new `ComponentSpec` entry and create:
 
 ## Support
 
+SICA is created and developed by **Issac K.T. Pang** under the supervision of **Professor Khalid M. Mosalam** ([ORCID: 0000-0003-2988-2361](https://orcid.org/0000-0003-2988-2361)). Professor Mosalam contributes **supervision** and **project administration**.
+
 SICA is supported by the [STAIRLab (STructural Artificial Intelligence Research Lab)](https://stairlab.berkeley.edu/) at UC Berkeley.
 
 <a href="https://stairlab.berkeley.edu/">
