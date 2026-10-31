@@ -1,0 +1,29 @@
+{
+  "title": "SICA: Structure Investigation and Condition Assessment for Bridges",
+  "upload_type": "software",
+  "version": "0.1.4",
+  "description": "<p>SICA (sica-bridge) is a Python package for post-earthquake visual inspection and bridge condition assessment using vision-capable large language models. It assigns R-states (R1-R4) with short explanations to photos of bridge components, then aggregates assessments into component-level and event-level summaries to support inspection and follow-up decisions.</p><p>Created and developed by Issac K.T. Pang under the supervision of Professor Khalid M. Mosalam, whose contributions include supervision and project administration. SICA is supported by the <a href=\"https://stairlab.berkeley.edu/\">STAIRLab (STructural Artificial Intelligence Research Lab)</a> at UC Berkeley.</p><p>Source code: <a href=\"https://github.com/issacpang/sica\">github.com/issacpang/sica</a>. Python package: <a href=\"https://pypi.org/project/sica-bridge/\">sica-bridge on PyPI</a>.</p>",
+  "creators": [
+    {
+      "name": "Pang, Issac K.T."
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Mosalam, Khalid M.",
+      "affiliation": "University of California, Berkeley",
+      "orcid": "0000-0003-2988-2361",
+      "type": "Supervisor"
+    }
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "keywords": [
+    "bridge inspection",
+    "post-earthquake assessment",
+    "structural health monitoring",
+    "large language models",
+    "computer vision"
+  ],
+  "language": "eng"
+}
